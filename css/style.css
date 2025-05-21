@@ -1,4 +1,12 @@
+* {
+    box-sizing: border-box;
+}
 
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
 #headerNavigation {
     display: flex;
@@ -18,6 +26,54 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#headerNavigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+#headerNavigation img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+#navigation {
+    display: flex;
+    gap: 10px;
+}
+
+#navigation a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  position: relative;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+#navigation a:hover {
+  color: #28a745; 
+}
+
+#navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #28a745;
+  transition: width 0.3s ease;
+}
+
+#navigation a:hover::after {
+  width: 100%;
+}
+
 #home {
     display: flex;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -33,7 +89,6 @@
     padding: 10px 20px 20px 20px;
 }
 
-
 #callUs {
     display: flex;
     direction: row;
@@ -48,9 +103,7 @@
 }
 
 #table {
-
     padding-left: 50px;
-    
 }
 
 #article img {
@@ -58,7 +111,6 @@
     max-height: 100%;
     border-radius: 10px;
 }
-
 
 #article h3 {
     color: rgba(128, 128, 128, 0.873);
@@ -126,29 +178,32 @@ section th {
 }
 
 .main_form .send_btn {
-    font-size: 17px;
-    transition: ease-in all 0.5s;
-    background-color: #000;
-    color: #fff;
-    padding: 13px 0px;
-    margin: auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    max-width: 200px;
-    width: 100%;
-    display: block;
-    text-transform: uppercase;
-    border-radius: 35px;
-    font-weight: 500;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  background-color: #000; /* hijau segar */
+  color: #fff;
+  border: none;
+  border-radius: 35px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  max-width: 220px;
+  width: 100%;
+  display: block;
+  margin: 40px auto;
 }
-  
 
 .main_form .send_btn:hover {
-    background-color: #FFC82A;
-    transition: ease-in all 0.5s;
-    color: black;
+  background-color: #28a745;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.main_form .send_btn:active {
+  transform: scale(0.97);
 }
 
 .card {
@@ -175,6 +230,14 @@ section th {
     border-color: #ff3860;
 }
 
+#benefit img {
+    width: 40px;
+    height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    object-fit: contain;
+}
+
 #benefit {
     margin-left: 16px;
     text-align: justify;
@@ -186,7 +249,6 @@ section th {
     text-align: justify;
     padding: 10px;
 }
-
 
 #package {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -206,13 +268,10 @@ section th {
 #logo2 {
     padding: 40px 150px 40px 10px;
     text-align: justify;
-
-
 }
 
 #logo1 {
     padding-left: 60px;
-
 }
 
 #logo3 {
@@ -227,7 +286,6 @@ section th {
     text-align: center;
     width: 100%;
     padding: 50px 0px 50px 0px;
-    margin-top: 50px;
 }
 
 .wrapper {
@@ -237,31 +295,29 @@ section th {
 }
 
 #call_btn {
-    font-size: 17px;
-    transition: ease-in all 0.5s;
-    background-color: #000;
-    color: #fff;
-    padding: 13px 0px;
-    margin: auto;
-    margin-top: 40px;
-    max-width: 200px;
-    width: 100%;
-    display: block;
-    text-transform: uppercase;
-    border-radius: 35px;
-    font-weight: 500;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;        
+  color: white;                      
+  font-size: 1rem;                   
+  padding: 12px 24px;                
+  border: none;                                  
+  cursor: pointer;             
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 30px;
 }
 
 #call_btn:hover {
-    background-color: #FFC82A;
-    transition: ease-in all 0.5s;
-    color: black;
+  background-color: #28a745;         
+  transform: translateY(-2px);       
 }
 
+#call_btn:active {
+  transform: scale(0.98);            
+}
 
 #quote {
-    margin-top: 20px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding: 50px;
@@ -311,28 +367,116 @@ section th {
     margin: auto;
 }
 
+#benefit2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    margin-left: 16px;
+    text-align: justify;
+}
+
+#benefit2 h4 {
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.benefit-item span {
+    background-color: rgba(128, 128, 128, 0.1);
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.benefit-text {
+    color: rgba(128, 128, 128, 1);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+section#package {
+    margin: auto;
+}
+
+h2#package {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+table#logo {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table#logo td.package-item {
+    padding: 15px;
+    vertical-align: top;
+    width: 33.33%;
+    box-sizing: border-box;
+}
+
+table#logo td.package-item img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+table#logo td.package-item div {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: calc(100% - 60px);
+}
+
+table#logo td.package-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+}
+
+table#logo td.package-item p {
+    font-size: small;
+    margin: 0;
+}
+
 @media screen and (max-width: 991.98px) {
-    .wrapper {
-        width: 90%;
-    }
+   .wrapper {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
 
     #headerNavigation {
-        display: block;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         width: 100%;
-        text-align: center;
     }
 
     #headerNavigation img {
+        width: 30px;
+        height: 30px;
         display: block;
-        width: 20%;
-        text-align: justify;
     }
 
     #navigation {
-        width: 100%;
-        margin: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
     }
 
+    #navigation a {
+        font-size: 10px;
+    }
 
     section {
         display: block;
@@ -347,5 +491,135 @@ section th {
     #logo {
         width: 20%;
     }
+}
 
+@media screen and (max-width: 768px) {
+    #callUs {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #article {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    aside {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    #benefit, #benefit2 {
+        padding: 10px;
+        margin: 0;
+    }
+
+    #benefit img {
+        width: 30px;
+        height: 30px;
+        max-width: 30px;
+        max-height: 30px;
+    }
+
+    .slideshow {
+        width: 100%;
+        height: auto;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .main_form input,
+    .main_form textarea {
+        width: 100%;
+    }
+
+     .benefit-item {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .benefit-text {
+        font-size: 14px;
+    }
+
+    #benefit2 {
+        margin-left: 0;
+        padding: 10px 5px;
+    }
+
+    table#logo, table#logo tbody, table#logo tr {
+      display: block;
+      width: 100%;
+    }
+
+    table#logo td.package-item {
+      display: flex;
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    table#logo td.package-item:last-child {
+      border-bottom: none;
+    }
+
+    table#logo td.package-item img {
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+
+    table#logo td.package-item div {
+      max-width: none;
+      display: block;
+    }
+
+    table#logo td.package-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+  }
+
+  table#logo td.package-item img {
+    margin: 0 0 10px 0;
+  }
+
+  table#logo td.package-item h4,
+  table#logo td.package-item p {
+    text-align: center;
+    margin: 0;
+  }
+
+  table#logo td.package-item p {
+    margin-top: 5px;
+  }
+
+  #headerNavigation {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #headerNavigation img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #navigation {
+        display: flex;
+        flex-direction: row; 
+        align-items: center;
+        gap: 8px;
+    }
+
+    #navigation a {
+        font-size: 14px;
+    }
 }
